@@ -10,8 +10,8 @@ from settings import Settings
 def run_game():
     # Initialise
     pygame.init()
-    game_settings=Settings()
-    screen = pygame.display.set_mode((game_settings.screen_width, game_settings.screen_height))
+    config = Configuration()
+    screen = pygame.display.set_mode((config.screen_width, config.screen_height))
     pygame.display.set_caption("Wizard vs Monster")
 
     # main loop
