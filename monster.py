@@ -1,7 +1,7 @@
 import pygame
 from pygame.sprite import Sprite
 
-class Alien(Sprite):
+class Monster(Sprite):
     """A class to represent a monster."""
 
     def __init__(self, config):

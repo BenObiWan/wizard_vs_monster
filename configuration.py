@@ -10,10 +10,10 @@ class Configuration():
 
         # Wizard configurations
         self.init_life = 3
+        self.wizard_speed_factor = 1.5
 
-        self.initialize_dynamic_settings()
+        self.initialize_dynamic_configurations()
 
     def initialize_dynamic_configurations(self):
         """Initialize configurations that change throughout the game."""
-        #scoring
-
+        pass
