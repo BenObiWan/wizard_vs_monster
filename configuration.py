@@ -12,8 +12,10 @@ class Configuration():
         self.init_life = 3
         self.wizard_speed_factor = 1.5
 
-        self.initialize_dynamic_configurations()
+        # Starting magic missile settings
+        self.start_magic_missile_width = 15
+        self.start_magic_missile_heigth = 3
+        self.start_magic_missile_color = 60, 60, 60
+        self.start_magic_missile_allowed = 3
+        self.start_magic_missile_speed_factor = 3
 
-    def initialize_dynamic_configurations(self):
-        """Initialize configurations that change throughout the game."""
-        pass

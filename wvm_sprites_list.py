@@ -1,5 +1,6 @@
 from pygame.sprite import Group
 from wizard import Wizard
+from magic_missile import MagicMissile
 
 class WvmSpritesList():
     """A class listing all the Sprites of the game."""
@@ -16,8 +17,24 @@ class WvmSpritesList():
 
     def update_all(self):
         """Update the positions of all sprites."""
+        self.update_missiles()
         self.wiz.update()
+
+    def update_missiles(self):
+        """update magic missiles positions"""
+        self.missiles.update()
+        # remove the missiles that have left the screen
+        for mi in self.missiles.copy():
+            if mi.rect.left >= self.screen.get_rect().right:
+                self.missiles.remove(mi)
 
     def draw(self):
         self.screen.fill(self.config.bg_color)
+        for mi in self.missiles:
+            mi.draw_missile()
         self.wiz.blitme()
+
+    def fire_missile(self):
+        """Fire a missile if limit not reached yet."""
+        if len(self.missiles) < self.wiz.magic_missile_allowed:
+            self.missiles.add(MagicMissile(self.config, self))

@@ -28,6 +28,8 @@ def check_keydown_events(event, config, sprites_list):
     elif event.key == pygame.K_DOWN:
         # move the Wizard downwards.
         sprites_list.wiz.moving_down = True
+    elif event.key == pygame.K_SPACE:
+        sprites_list.fire_missile()
 
 def check_keyup_events(event, config, sprites_list):
     """Respond to key releases."""

@@ -27,6 +27,13 @@ class Wizard(Sprite):
         self.moving_up = False
         self.moving_down = False
 
+        # Starting magic missile settings
+        self.magic_missile_width = config.start_magic_missile_width
+        self.magic_missile_heigth = config.start_magic_missile_heigth
+        self.magic_missile_color = config.start_magic_missile_color
+        self.magic_missile_allowed = config.start_magic_missile_allowed
+        self.magic_missile_speed_factor = config.start_magic_missile_speed_factor
+
     def update(self):
         """Update the wizard's position based on the movement flag."""
         if self.moving_up and self.rect.top > self.screen_rect.top:
