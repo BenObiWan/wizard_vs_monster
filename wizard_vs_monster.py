@@ -15,6 +15,7 @@ def run_game():
     screen = pygame.display.set_mode((config.screen_width, config.screen_height))
     pygame.display.set_caption("Wizard vs Monster")
     sprites_list = WvmSpritesList(config, screen)
+    sprites_list.create_monster()
 
     # main loop
     while True:
