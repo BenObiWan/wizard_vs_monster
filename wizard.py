@@ -12,7 +12,7 @@ class Wizard(Sprite):
         self.screen = sprites_list.screen
 
         # load the wizard's image
-        self.image = pygame.image.load('images/wizard.bmp')
+        self.image = pygame.image.load('images/wizard.png')
         self.rect = self.image.get_rect()
         self.screen_rect = sprites_list.screen.get_rect()
 
